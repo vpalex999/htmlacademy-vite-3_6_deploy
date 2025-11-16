@@ -6,6 +6,7 @@ import createSvgSpritePlugin from 'vite-plugin-svg-spriter';
 const FRONT_PATH = 'src';
 
 export default defineConfig ({
+  base: "/htmlacademy-vite-3_6_deploy/",
   root: 'src',
   plugins: [
     createSvgSpritePlugin ({
@@ -26,7 +27,7 @@ export default defineConfig ({
   build: {
     minify: true,
     cssMinify: true,
-    sourcemap: true,
+    // sourcemap: true,
     rollupOptions: {
       input: {
         index: resolve (__dirname, FRONT_PATH, 'index.html'),
